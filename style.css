@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-rows: 1fr 2fr;
+    }
+}
+
+#changeChatBtn {
+    position: absolute;
+    right: 0;
+    background-color: #ffffff1c;
+    border: 0;
+    cursor: pointer;
+}
+
+#changeChatBtn:active {
+    animation: growTurn 0.7s ease-in-out;
+}
+
+@keyframes growTurn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
